@@ -27,8 +27,9 @@ class MyApp extends StatelessWidget {
             icon: Icon(Icons.search)
           ),
           BottomNavigationBarItem(
-            label: 'Setting',
-            icon : Icon(Icons.settings)
+            label: 'Report',
+            icon : Icon(Icons.report,
+            color: Colors.red)
           )
         ],
        ),
