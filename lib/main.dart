@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-   MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   String buttonName = "click";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,9 +25,11 @@ class MyApp extends StatelessWidget {
         body: Center(
             child: ElevatedButton(
                 onPressed: () {
-                  print("TESTING PRINT!");
+                  setState(() {
+                    buttonName = "Clicked";
+                  });
                 },
-                child:  Text(buttonName))),
+                child: Text(buttonName))),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
