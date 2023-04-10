@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("App Title!"),
         ),
-        body: const Center(child:  Text('This is BODY')),
+        body: Center(
+            child:
+                ElevatedButton(onPressed: () {}, child: const Text("click!"))),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
