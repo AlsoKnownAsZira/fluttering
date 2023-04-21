@@ -5,13 +5,13 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyApp> createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   String buttonName = "click";
   int currentIndex = 0;
   @override
@@ -23,13 +23,33 @@ class _MyAppState extends State<MyApp> {
           title: const Text("App Title!"),
         ),
         body: Center(
-            child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    buttonName = "Clicked";
-                  });
-                },
-                child: Text(buttonName))),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        buttonName = "Clicked";
+                      });
+                    },
+                    child: Text(buttonName)), 
+                    ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        buttonName = "Clicked";
+                      });
+                    },
+                    child: Text(buttonName)) ,
+                    ElevatedButton(
+                      
+                    onPressed: () {
+                      setState(() {
+                        buttonName = "Clicked";
+                      });
+                    },
+                    child: Text(buttonName))
+              ],
+            )),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
             BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
