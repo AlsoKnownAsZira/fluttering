@@ -23,17 +23,19 @@ class MyAppState extends State<MyApp> {
           title: const Text("App Title!"),
         ),
         body: Center(
-          child: SizedBox(
-            width: double.infinity,
+          child: Container(
+            
+          width: double.infinity,
              height: double.infinity,
+             color: Colors.deepPurple,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    onPrimary : Colors.white,
-                    primary: Colors.green,
+                    foregroundColor : Colors.white,
+                    backgroundColor: Colors.green,
                   ),
                     onPressed: () {
                       setState(() {
@@ -43,8 +45,8 @@ class MyAppState extends State<MyApp> {
                     child: Text(buttonName)),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    onPrimary: Colors.white,
-                    primary: Colors.red
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.red
                   ),
                     onPressed: () {
                       setState(() {
@@ -54,8 +56,8 @@ class MyAppState extends State<MyApp> {
                     child: Text(buttonName)),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    onPrimary: Colors.white,
-                    primary: Colors.orange,
+                    foregroundColor: Colors.white,
+                    backgroundColor: Colors.orange,
                   ),
                     onPressed: () {
                       setState(() {
