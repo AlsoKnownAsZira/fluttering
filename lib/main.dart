@@ -28,9 +28,13 @@ class MyAppState extends State<MyApp> {
              height: double.infinity,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary : Colors.white,
+                    primary: Colors.green,
+                  ),
                     onPressed: () {
                       setState(() {
                         buttonName = "Clicked";
@@ -38,6 +42,10 @@ class MyAppState extends State<MyApp> {
                     },
                     child: Text(buttonName)),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: Colors.red
+                  ),
                     onPressed: () {
                       setState(() {
                         buttonName = "Clicked";
@@ -45,6 +53,10 @@ class MyAppState extends State<MyApp> {
                     },
                     child: Text(buttonName)),
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    onPrimary: Colors.white,
+                    primary: Colors.orange,
+                  ),
                     onPressed: () {
                       setState(() {
                         buttonName = "Clicked";
