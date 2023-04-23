@@ -71,9 +71,7 @@ class MyAppState extends State<MyApp> {
             
             child: Image.network('https://statik.tempo.co/data/2022/02/18/id_1089192/1089192_720.jpg'),
           
-          ): Container(
-            
-          ),
+          ): Image.asset('images/rb12.jpeg')
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
