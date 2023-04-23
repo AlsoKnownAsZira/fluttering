@@ -67,7 +67,13 @@ class MyAppState extends State<MyApp> {
                     child: Text(buttonName))
               ],
             ),
-          ) : const SizedBox(),
+          ) : currentIndex == 1? Container(
+            
+            child: Image.network('https://statik.tempo.co/data/2022/02/18/id_1089192/1089192_720.jpg'),
+          
+          ): Container(
+            
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
