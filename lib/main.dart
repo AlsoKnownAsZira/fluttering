@@ -23,12 +23,12 @@ class MyAppState extends State<MyApp> {
           title: const Text("App Title!"),
         ),
         body: Center(
-          child: Container(
+          child:currentIndex ==0? Container(
             
           width: double.infinity,
              height: double.infinity,
              color: Colors.deepPurple,
-            child: Row(
+            child:  Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -67,7 +67,7 @@ class MyAppState extends State<MyApp> {
                     child: Text(buttonName))
               ],
             ),
-          ),
+          ) : const SizedBox(),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const [
